@@ -4,7 +4,7 @@ import NewPost from './NewPost/NewPost'
 import { AddPost, UpdateNewPosttext } from '../../../redux/State'
 
 export default function Post(props) {
-	const Postinfo = props.state.postData.map(p => (
+	const Postinfo = props.state.profilePage.postData.map(p => (
 		<NewPost like={p.like} message={p.message} />
 	))
 
