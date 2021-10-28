@@ -3,8 +3,11 @@ import s from './component/content/Content.module.css'
 import Header from './component/header/Header'
 import Content from './component/content/Content'
 import NavBar from './component/navBar/NavBar'
-import Dialogs from './component/Dialogs/Dialogs'
 import { BrowserRouter, Route } from 'react-router-dom'
+import DialogsConteiner from './component/Dialogs/DialogsConteiner'
+
+
+
 
 function App(props) {
 	return (
@@ -21,7 +24,7 @@ function App(props) {
 					/>
 					<Route
 						path="/Message"
-						render={() => <Dialogs store={props.store} />}
+						render={() => <DialogsConteiner store={props.store} />}
 					/>
 				</div>
 			</div>

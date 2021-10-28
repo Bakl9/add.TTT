@@ -2,10 +2,9 @@ import React from 'react'
 import s from './Dialogs.module.css'
 import People from './people/People'
 import Message from './Message/Message'
-import { updateNewMessageBody, sentMessageCreate } from '../../redux/messageReduser'
 
 export default function Dialogs(props) {
-	let state = props.store._state
+	let state = props.messagePage
 
 	const MessageItem = state.messagePage.messageData.map(el => (
 		<Message message={el.message} id={el.id} />
@@ -17,12 +16,12 @@ export default function Dialogs(props) {
 	const newMessageBody = state.newMessageBody
 
 	const onMessageClick = () => {
-		props.store.dispatch(sentMessageCreate())
+		props.sentMessageCreate()
 	}
 
 	const newMessageChange = e => {
 		let body = e.target.value
-		props.store.dispatch(updateNewMessageBody(body))
+		props.updateNewMessageBody(body)
 	}
 
 	return (
