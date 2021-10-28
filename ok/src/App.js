@@ -6,9 +6,6 @@ import NavBar from './component/navBar/NavBar'
 import { BrowserRouter, Route } from 'react-router-dom'
 import DialogsConteiner from './component/Dialogs/DialogsConteiner'
 
-
-
-
 function App(props) {
 	return (
 		<BrowserRouter>
@@ -16,16 +13,8 @@ function App(props) {
 				<Header />
 				<NavBar />
 				<div className={s.content}>
-					<Route
-						path="/Profile"
-						render={() => (
-							<Content store={props.store} />
-						)}
-					/>
-					<Route
-						path="/Message"
-						render={() => <DialogsConteiner store={props.store} />}
-					/>
+					<Route path="/Profile" render={() => <Content />} />
+					<Route path="/Message" render={() => <DialogsConteiner />} />
 				</div>
 			</div>
 		</BrowserRouter>

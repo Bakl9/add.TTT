@@ -4,13 +4,14 @@ import People from './people/People'
 import Message from './Message/Message'
 
 export default function Dialogs(props) {
+	
 	let state = props.messagePage
 
-	const MessageItem = state.messagePage.messageData.map(el => (
+	const MessageItem = state.messageData.map(el => (
 		<Message message={el.message} id={el.id} />
 	))
 
-	const PeopleItem = state.messagePage.peopleDate.map(people => (
+	const PeopleItem = state.peopleDate.map(people => (
 		<People name={people.name} id={people.id} />
 	))
 	const newMessageBody = state.newMessageBody
