@@ -1,19 +1,16 @@
 import store from './redux/State'
-import React, { Profiler } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
-import StoreContext from './StoreContext'
-
+import { Provider } from 'react-redux'
 
 let rerenderEntireTree = state => {
 	ReactDOM.render(
-		
 		<React.StrictMode>
-			<Profiler store={store}>
-			<App
-			/>
-			</Profiler>
+			<Provider store={store}>
+				<App />
+			</Provider>
 		</React.StrictMode>,
 		document.getElementById('root')
 	)
