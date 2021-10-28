@@ -1,22 +1,27 @@
 import React from 'react'
 import s from './Post.module.css'
 import NewPost from './NewPost/NewPost'
-import { AddPost, UpdateNewPosttext } from '../../../redux/State'
 
-export default function Post(props) {
-	const Postinfo = props.state.profilePage.postData.map(p => (
+debugger;
+const Post = (props) => {
+	const Postinfo = 
+	props.postData.map(p => (
 		<NewPost like={p.like} message={p.message} />
 	))
-
+	
 	let newPostElement = React.createRef()
 
 	let postClick = () => {
-		props.dispatch(AddPost())
+		props.postClick()
+		// props.dispatch(AddPost())
+		
 	}
 
 	let onPostChange = () => {
 		let text = newPostElement.current.value
-		props.dispatch(UpdateNewPosttext(text))
+		props.UpdateNewPosttext(text)
+		// let action = UpdateNewPosttext(text)
+		// props.dispatch(action)
 	}
 
 	return (
@@ -33,3 +38,5 @@ export default function Post(props) {
 		</div>
 	)
 }
+
+export default Post

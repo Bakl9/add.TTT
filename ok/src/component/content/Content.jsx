@@ -1,6 +1,6 @@
 import React from 'react'
 import s from './Content.module.css'
-import Post from './post/Post'
+
 
 export default function Content(props) {
 	return (
@@ -12,7 +12,8 @@ export default function Content(props) {
 					alt="abstraction"
 				/>
 			</div>
-			<Post dispatch={props.dispatch} store={props.store} state={props.state} />
+			
+			
 		</div>
 	)
 }

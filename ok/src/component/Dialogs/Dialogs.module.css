@@ -2,3 +2,16 @@
     display: grid;
     grid-template-columns: 2fr 10fr;
 }
+
+.box {
+    display: grid;
+    grid-template-rows: 1000px 1fr;
+    grid-template-columns: 2fr 10fr;
+    grid-template-areas: 
+    'people message' 
+    'messagePeople';
+}
+
+.messagePeople {
+
+}

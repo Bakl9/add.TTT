@@ -32,3 +32,12 @@ export const messageReduser = (state = initialState, action) => {
 			return state
 	}
 }
+
+export const sentMessageCreate = () => ({ type: SEND_MESSAGE })
+export const updateNewMessageBody = body => ({
+	type: UPDATE_MESSAGE,
+	body: body,
+})
+
+
+export default messageReduser 

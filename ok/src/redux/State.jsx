@@ -1,11 +1,6 @@
-import { messageReduser } from './messageReduser'
-import { profileReduser } from './profileReduser'
-import { sideBarReduser } from './sedeBarReduser'
-
-const UPDATE_POST = 'UPRATE-NEW-POST-TEXT'
-const ADD_POST = 'ADD-POST'
-const UPDATE_MESSAGE = 'UPDATE-MESSAGE'
-const SEND_MESSAGE = 'SEND-MESSAGE'
+import  messageReduser  from './messageReduser'
+import  profileReduser  from './profileReduser'
+import  sideBarReduser  from './sedeBarReduser'
 
 let store = {
 	rerenderEntireTree() {},
@@ -57,12 +52,6 @@ let store = {
 	},
 } // 17:15
 
-export const AddPost = () => ({ type: ADD_POST })
-export const UpdateNewPosttext = text => ({ type: UPDATE_POST, newText: text })
-export const sentMessageCreate = () => ({ type: SEND_MESSAGE })
-export const updateNewMessageBody = body => ({
-	type: UPDATE_MESSAGE,
-	body: body,
-})
+
 
 export default store

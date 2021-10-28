@@ -2,7 +2,7 @@ import React from 'react'
 import s from './Dialogs.module.css'
 import People from './people/People'
 import Message from './Message/Message'
-import { updateNewMessageBody, sentMessageCreate } from '../../redux/State'
+import { updateNewMessageBody, sentMessageCreate } from '../../redux/messageReduser'
 
 export default function Dialogs(props) {
 	let state = props.store._state
@@ -27,6 +27,7 @@ export default function Dialogs(props) {
 
 	return (
 		<div>
+			<div className={s.box}>
 			<div className={s.dialog}>
 				<div className={s.People}>{PeopleItem}</div>
 				<div className={s.Message}>{MessageItem}</div>
@@ -34,7 +35,9 @@ export default function Dialogs(props) {
 					<div>
 						<button onClick={onMessageClick}>Click</button>
 					</div>
-					<div>
+			</div>
+		
+					<div className={s.messagePeople}>
 						<textarea
 							onChange={newMessageChange}
 							value={newMessageBody}
