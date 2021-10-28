@@ -16,7 +16,7 @@ function App(props) {
 					<Route
 						path="/Profile"
 						render={() => (
-							<Content state={props.state} dispatch={props.dispatch} />
+							<Content store={props.store} />
 						)}
 					/>
 					<Route

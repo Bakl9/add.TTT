@@ -1,8 +1,9 @@
 import React from 'react'
 import s from './Content.module.css'
-
+import PConteiner from './post/PConteiner'
 
 export default function Content(props) {
+
 	return (
 		<div className={s.content}>
 			<div>
@@ -12,8 +13,9 @@ export default function Content(props) {
 					alt="abstraction"
 				/>
 			</div>
-			
-			
+			<PConteiner 
+			store={props.store} 
+			/>
 		</div>
 	)
 }

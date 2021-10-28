@@ -2,19 +2,20 @@ import React from 'react'
 import { AddPost, UpdateNewPosttext } from '../../../redux/profileReduser'
 import Post from './Post'
 
-export function poctConteiner (props) {
+ function postConteinet (props) {
 
 	let state = props.store.getState()
 
 	let postClick = () => {
 		props.store.dispatch(AddPost())
 	}
-
+	debugger;
 	let onPostChange = (text) => {
 		let action = UpdateNewPosttext(text)
-		props.store.store.dispatch(action)
+		debugger;
+		props.store.dispatch(action)
 	}
-	debugger;
+
 	return (
 		<Post 
 		UpdateNewPosttext={onPostChange}
@@ -25,3 +26,4 @@ export function poctConteiner (props) {
 	)
  }
 
+ export default postConteinet
