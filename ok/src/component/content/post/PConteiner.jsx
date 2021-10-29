@@ -31,14 +31,15 @@ import { connect } from 'react-redux'
 // 		</StoreContext.Consumer>
 // 	)
 //  }
-const mapStateToProps = (state) => {
+const StateToProps = (state) => {
 	return {
 		newPostText: state.profilePage.newPostText,
 		postData: state.profilePage.postData
 	}
 }
 
-const mapDispatchToProps = (dispatch) => {
+debugger;
+const DispatchToProps = (dispatch) => {
 	return {
 		UpdateNewPosttext : (text) => {
 			let action = UpdateNewPosttext(text)
@@ -51,6 +52,6 @@ const mapDispatchToProps = (dispatch) => {
 	
 }
 
- const postConteiner = connect(mapStateToProps,mapDispatchToProps)(Post)
+ const postConteiner = connect(StateToProps,DispatchToProps)(Post)
 
  export default postConteiner

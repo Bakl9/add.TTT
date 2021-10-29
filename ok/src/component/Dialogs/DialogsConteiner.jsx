@@ -10,7 +10,7 @@ const mapStateTopProps = (state) => {
 		messagePage: state.messagePage
 	}
 }
-
+debugger;
 const mapDispatchToProps = (dispatch) => {
 	return {
 		updateNewMessageBody: (body) => {
